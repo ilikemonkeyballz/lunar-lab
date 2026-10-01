@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import LabIllustration from "./LabIllustration";
 
@@ -16,12 +17,12 @@ export default function Hero() {
             A modular research platform designed to help researchers study plant growth in lunar-relevant environments.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href="#platform" className="label rounded-md bg-navy px-6 py-3.5 text-paper transition hover:bg-navy/90">
+            <Link href="/problem" className="label rounded-md bg-navy px-6 py-3.5 text-paper transition hover:bg-navy/90">
               Explore the platform
-            </a>
-            <a href="#system" className="label inline-flex items-center gap-2 rounded-md border border-navy/40 px-6 py-3.5 text-navy transition hover:border-navy">
+            </Link>
+            <Link href="/background" className="label inline-flex items-center gap-2 rounded-md border border-navy/40 px-6 py-3.5 text-navy transition hover:border-navy">
               Our approach <ArrowRight size={14} />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative">

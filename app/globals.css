@@ -7,6 +7,8 @@
   --color-navy: #243b53;
   --color-leaf: #527a61;
   --color-gold: #c7a96b;
+  --color-tint-blue: #e3eaf1;
+  --color-tint-green: #e4ece6;
   --font-sans: var(--font-geist-sans), "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }

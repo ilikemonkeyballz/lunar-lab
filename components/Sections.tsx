@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, Sun, Sprout, Activity, Droplets, Gauge, SlidersHorizontal, LayoutGrid } from "lucide-react";
 import LabIllustration from "./LabIllustration";
 
@@ -40,7 +41,7 @@ export function Idea() {
     <section className={sec}>
       <div className="wrap grid items-center gap-14 lg:grid-cols-12">
         <div className="lg:col-span-6">
-          <Head n="01 / 05" t="The idea" />
+          <Head n="01 / 04" t="The idea" />
           <h2 className={h2}>A controlled environment for lunar agriculture research.</h2>
           <p className="mt-6 max-w-lg text-lg text-ink/70">
             The platform holds a plant system inside an environment researchers can adjust. Each configuration can be observed and compared with the next.
@@ -66,65 +67,12 @@ export function Idea() {
   );
 }
 
-const layers = [
-  { n: "03", t: "Lighting" },
-  { n: "04", t: "Monitoring" },
-  { n: "01", t: "Growth environment" },
-  { n: "02", t: "Resource delivery" },
-  { n: "05", t: "Control" },
-];
-
-export function Platform() {
-  const cx = 280, hw = 170, hh = 46;
-  return (
-    <section id="platform" className={`${sec} border-y border-navy/15 bg-mist/50`}>
-      <div className="wrap">
-        <Head n="02 / 05" t="The platform" />
-        <h2 className={`${h2} max-w-2xl`}>One platform. Multiple possibilities.</h2>
-        <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1.5fr_.5fr]">
-          <svg viewBox="0 0 600 660" className="w-full" fill="none" strokeLinecap="round" role="img" aria-label="Exploded view of the five platform components">
-            {layers.map((_, i) => i < 4 && (
-              <g key={i} stroke="rgba(36,59,83,.35)" strokeDasharray="4 4">
-                <path d={`M${cx - hw} ${90 + i * 120}V${210 + i * 120}M${cx + hw} ${90 + i * 120}V${210 + i * 120}M${cx} ${90 + i * 120 + hh}V${210 + i * 120 - hh}`} />
-              </g>
-            ))}
-            {layers.map((l, i) => {
-              const y = 90 + i * 120;
-              return (
-                <g key={l.n}>
-                  <path d={`M${cx - hw} ${y}L${cx} ${y - hh}L${cx + hw} ${y}L${cx} ${y + hh}Z`} fill="#F5F3EE" stroke="#243B53" strokeWidth="1.5" />
-                  {i === 0 && [-60, 0, 60].map((d) => <circle key={d} cx={cx + d} cy={y} r="4" fill="#C7A96B" />)}
-                  {i === 1 && [-70, 0, 70].map((d) => <g key={d}><circle cx={cx + d} cy={y} r="3.5" fill="#243B53" /><circle cx={cx + d} cy={y} r="9" stroke="#243B53" opacity=".35" /></g>)}
-                  {i === 2 && [-50, 0, 50].map((d) => <g key={d} stroke="#527A61" strokeWidth="2"><path d={`M${cx + d} ${y + 6}V${y - 16}`} /><ellipse cx={cx + d + 7} cy={y - 10} rx="7" ry="3.5" fill="#527A61" /></g>)}
-                  {i === 3 && <path d={`M${cx - 100} ${y}H${cx + 100}M${cx - 50} ${y - 20}V${y + 20}M${cx + 50} ${y - 20}V${y + 20}`} stroke="#243B53" strokeWidth="1.5" />}
-                  {i === 4 && <><rect x={cx - 34} y={y - 12} width="68" height="24" rx="3" fill="#243B53" opacity=".15" stroke="#243B53" /><circle cx={cx + 20} cy={y} r="3" fill="#C7A96B" /></>}
-                  <path d={`M${cx + hw} ${y}H530`} stroke="rgba(36,59,83,.4)" />
-                  <circle cx="548" cy={y} r="17" fill="#F5F3EE" stroke="#243B53" />
-                  <text x="548" y={y + 4} textAnchor="middle" fontSize="12" fill="#243B53" fontFamily="var(--font-geist-mono), monospace">{l.n}</text>
-                </g>
-              );
-            })}
-          </svg>
-          <ol className="space-y-4">
-            {[...layers].sort((a, b) => a.n.localeCompare(b.n)).map((l) => (
-              <li key={l.n} className="flex items-baseline gap-4 border-b border-navy/15 pb-3">
-                <span className="label text-leaf">{l.n}</span>
-                <span className="text-base">{l.t}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function HowItWorks() {
   const steps = ["Configure", "Grow", "Measure", "Compare"];
   return (
     <section id="system" className={sec}>
       <div className="wrap">
-        <Head n="03 / 05" t="How it works" />
+        <Head n="02 / 04" t="How it works" />
         <h2 className={h2}>Four steps, repeated.</h2>
         <div className="relative mt-16">
           <div className="absolute bottom-0 left-5 top-0 w-px bg-navy/20 md:bottom-auto md:left-0 md:right-0 md:top-5 md:h-px md:w-full" />
@@ -161,7 +109,7 @@ export function Experiment() {
   return (
     <section className={`${sec} grid-bg-dark bg-navy text-paper`}>
       <div className="wrap">
-        <p className="label mb-6 flex items-center gap-4 text-paper/60"><span>04 / 05</span><span className="h-px w-10 bg-paper/30" /><span>Engineered for experimentation</span></p>
+        <p className="label mb-6 flex items-center gap-4 text-paper/60"><span>03 / 04</span><span className="h-px w-10 bg-paper/30" /><span>Engineered for experimentation</span></p>
         <h2 className={`${h2} max-w-2xl`}>Change the conditions. Study the response.</h2>
         <div className="mt-14 grid items-center gap-8 lg:grid-cols-[.7fr_1.6fr_.7fr]">
           <div className="grid gap-5">{vars.slice(0, 2).map((x) => <Chip key={x.t} {...x} />)}</div>
@@ -182,7 +130,7 @@ export function Research() {
   return (
     <section id="research" className={sec}>
       <div className="wrap">
-        <Head n="05 / 05" t="Research platform" />
+        <Head n="04 / 04" t="Research platform" />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {cards.map(({ Icon, t, d }) => (
             <article key={t} className="flex min-h-[320px] flex-col justify-between rounded-2xl border border-navy/15 bg-paper p-8 shadow-[0_1px_2px_rgba(23,26,28,.05)]">
@@ -212,9 +160,9 @@ export function Final() {
         <p className="mx-auto mt-6 max-w-lg text-lg text-ink/70">
           A physical platform for studying what it takes to grow plants in a lunar environment.
         </p>
-        <a href="#platform" className="label mt-10 inline-flex items-center gap-2 rounded-md bg-navy px-7 py-4 text-paper transition hover:bg-navy/90">
+        <Link href="/experimentation" className="label mt-10 inline-flex items-center gap-2 rounded-md bg-navy px-7 py-4 text-paper transition hover:bg-navy/90">
           Explore the system <ArrowRight size={14} />
-        </a>
+        </Link>
       </div>
     </section>
   );
