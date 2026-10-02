@@ -97,6 +97,16 @@ export default function Page() {
           </div>
         </div>
       </Sub>
+
+      {/* ===== 04 EXPERT QUESTIONS ===== */}
+      <Sub n="04" title="Expert Questions" bg="bg-tint-blue">
+        <p className={body}>Questions we plan to bring to subject-matter experts to guide the engineering design.</p>
+        <ul className="space-y-4 pt-2">
+          <li className={li}><span className={dot} /><span>How do we prioritize plant species based on nutritional density versus biomass waste?
+</span></li>
+          <li className={li}><span className={dot} /><span>How can we optimize the greenhouse layout to maximize usable space and ease of movement while still accommodating all the necessary equipment and infrastructure for efficient operation? </span></li>
+        </ul>
+      </Sub>
     </>
   );
 }
