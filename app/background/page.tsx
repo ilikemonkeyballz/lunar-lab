@@ -139,7 +139,7 @@ export default function Page() {
 
       {/* ===== 02 RESEARCH GAPS ===== */}
       <Sub n="02" title="Research Gaps" bg="bg-tint-blue">
-        <p className={body}>Write your intro to research gaps here.</p>
+        <p className={body}></p>
         <div className="grid gap-6 pt-2">
           <div className={item}>
             <h3 className={itemTitle}>Rapid Modular Reconfiguration</h3>
