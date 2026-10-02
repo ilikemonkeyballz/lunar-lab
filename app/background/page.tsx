@@ -90,7 +90,7 @@ export default function Page() {
           <h1 className="max-w-3xl text-[clamp(2.2rem,4.6vw,3.5rem)] font-medium leading-[1.06] tracking-tight text-navy">
             What is already known, and what is still open.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-ink/70">Write your background summary here.</p>
+          <p className="mt-6 max-w-2xl text-lg text-ink/70"></p>
         </div>
       </header>
 
